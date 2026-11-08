@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Internship Board | EdVyro Task 2</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#results">Skip to results</a>
+  <header class="top">
+    <h1>Internship Board</h1>
+    <p>Browse fictional internships and narrow them by domain, work mode or skill.</p>
+  </header>
+  <main>
+    <section aria-labelledby="filters-h">
+      <h2 id="filters-h" class="sr-only">Search and filters</h2>
+      <form id="filters" role="search" autocomplete="off">
+        <div class="field">
+          <label for="q">Search by title, company or skill</label>
+          <input id="q" type="search" placeholder="Try React or Python">
+        </div>
+        <div class="field">
+          <label for="mode">Work mode</label>
+          <select id="mode">
+            <option value="">Any mode</option>
+            <option value="remote">Remote</option>
+            <option value="hybrid">Hybrid</option>
+            <option value="onsite">On-site</option>
+          </select>
+        </div>
+        <button type="reset" id="reset" class="ghost">Clear filters</button>
+      </form>
+      <div id="chips" role="group" aria-label="Filter by domain"></div>
+    </section>
+    <p id="count" role="status" aria-live="polite"></p>
+    <section id="results" tabindex="-1" aria-label="Internship results">
+      <div id="list" class="grid"></div>
+      <div id="state" class="state" hidden></div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
